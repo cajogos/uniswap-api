@@ -1,5 +1,7 @@
 export type Maybe<T> = T | null;
-export type Exact<T extends { [key: string]: any }> = { [K in keyof T]: T[K] };
+export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
+export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
+export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
 /** All built-in and custom scalars, mapped to their actual values */
 export interface Scalars {
   ID: string;
@@ -2015,7 +2017,7 @@ export interface User_Filter {
 
 export type PairsVolumeQueryVariables = Exact<{
   limit: Scalars['Int'];
-  pairIds: ReadonlyArray<Scalars['ID']>;
+  pairIds: ReadonlyArray<Scalars['ID']> | Scalars['ID'];
   blockNumber: Scalars['Int'];
 }>;
 
@@ -2035,7 +2037,7 @@ export type TokenInfoFragment = (
 
 export type TopPairsQueryVariables = Exact<{
   limit: Scalars['Int'];
-  excludeTokenIds: ReadonlyArray<Scalars['String']>;
+  excludeTokenIds: ReadonlyArray<Scalars['String']> | Scalars['String'];
 }>;
 
 

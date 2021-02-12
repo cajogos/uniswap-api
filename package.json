@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@graphql-codegen/cli": "1.15.4",
-    "@graphql-codegen/typescript": "1.15.4",
+    "@graphql-codegen/typescript": "^1.20.2",
     "@graphql-codegen/typescript-operations": "^1.15.4",
     "@types/aws-lambda": "^8.10.59",
     "@types/node-fetch": "^2.3.7",
@@ -28,6 +28,7 @@
     "serverless": "^1.75.1",
     "serverless-api-gateway-caching": "^1.4.1",
     "serverless-content-encoding": "^1.1.0",
+    "serverless-offline": "^6.8.0",
     "serverless-plugin-typescript": "^1.1.9",
     "typescript": "^3.9.7"
   },

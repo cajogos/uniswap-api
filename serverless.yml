@@ -47,6 +47,7 @@ plugins:
   - serverless-plugin-typescript
   - serverless-api-gateway-caching
   - serverless-content-encoding
+  - serverless-offline
 
 functions:
   v1-summary:
